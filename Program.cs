@@ -132,4 +132,14 @@ namespace OverrideAndNew
             _myList.Add(s);
         }
     }
+
+    interface IMyInterface
+    {
+        void MyInterfaceMethod();
+    }
+
+    public abstract class AbstractInterfaceClass : IMyInterface
+    {
+        public abstract void MyInterfaceMethod();
+    }
 }
