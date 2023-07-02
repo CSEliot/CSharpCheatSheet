@@ -141,5 +141,22 @@ namespace OverrideAndNew
     public abstract class AbstractInterfaceClass : IMyInterface
     {
         public abstract void MyInterfaceMethod();
+
+        public abstract void MyAbstractMethod();
     }
+
+    public class NormalClass : AbstractInterfaceClass
+    {
+        //Notice: abstract DEMANDS 'override' keyword
+        public override void MyAbstractMethod()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void MyInterfaceMethod()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
 }
